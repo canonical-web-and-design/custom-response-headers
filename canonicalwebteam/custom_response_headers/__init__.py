@@ -1,12 +1,14 @@
 from django.conf import settings
+from django.utils.deprecation import MiddlewareMixin
 
-class Middleware:
+class Middleware(MiddlewareMixin):
 
-    def __init__(self, get_response):
-        self.get_response = get_response
-
-    def __call__(self, request):
-        response = self.get_response(request)
+    def process_response(self, request, response):
+        """
+        Look for a "CUSTOM_HEADERS" dictionary
+        and add any non-empty values from that dictionary
+        as custom HTTP headers
+        """
 
         custom_headers = getattr(settings, 'CUSTOM_HEADERS', {})
 

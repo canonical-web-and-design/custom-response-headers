@@ -1,1 +1,2 @@
 v0.1.0, 2017-08-18 -- Initial release
+v0.2.0, 2017-08-18 -- Add compatability with older MIDDLEWARE_CLASSES setting

@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='canonicalwebteam.custom-response-headers',
-    version='0.1.0',
+    version='0.2.0',
     author='Canonical Webteam',
     url='https://github.com/canonical-webteam/custom-response-headers',
     packages=[
